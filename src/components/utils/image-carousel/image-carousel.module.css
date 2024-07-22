@@ -1,0 +1,20 @@
+.carousel{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  gap: 3em;
+  overflow: auto;
+}
+
+.carousel::-webkit-scrollbar {
+  display: hidden;
+}
+
+.carousel.notransition {
+  scroll-behavior: auto;
+}
