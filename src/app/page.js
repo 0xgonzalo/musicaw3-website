@@ -11,28 +11,7 @@ import { useRef, useState, useEffect } from 'react';
 
 export default function Home() {
 
-  // const [songs, setSongs] = useState(songsdata);
-  // const [isplaying, setisplaying] = useState(false);
-  // const [currentSong, setCurrentSong] = useState(songsdata[0]);
 
-  // const audioElem = useRef();
-
-  // useEffect(() => {
-  //   if (isplaying) {
-  //     audioElem.current.play();
-  //   }
-  //   else {
-  //     audioElem.current.pause();
-  //   }
-  // }, [isplaying, currentSong])
-
-  // const onPlaying = () => {
-  //   const duration = audioElem.current.duration;
-  //   const ct = audioElem.current.currentTime;
-
-  //   setCurrentSong({ ...currentSong, "progress": ct / duration * 100, "length": duration })
-
-  // }
   return (
     <main className="flex min-h-screen flex-col items-center">
       <div className="min-w-screen max-w-screen overflow-hidden h-full flex flex-col items-center">
@@ -41,10 +20,7 @@ export default function Home() {
         <Carousel />
         <EventsBanner />
         <DropsBanner />
-        <FoundersBanner />
-        {/* <audio src='/audios/viajerito1.mp3' ref={audioElem} onTimeUpdate={onPlaying} />
-        <AudioPlayer songs={songs} setSongs={setSongs} isplaying={isplaying} setisplaying={setisplaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} /> */}
-
+        <FoundersBanner />      
       </div>      
     </main>
   );

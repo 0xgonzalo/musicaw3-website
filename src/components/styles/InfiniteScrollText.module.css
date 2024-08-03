@@ -1,24 +1,15 @@
 .marquee {
-  display: flex;
+  display: inline-block;
   white-space: nowrap;
-  overflow: hidden;
-  animation: marquee 20s linear infinite;
-}
-
-.marquee span {
-  display: flex;
-}
-
-.marquee-content {
-  display: flex;
-  padding-left: 100%; /* Mueve el contenido duplicado fuera del contenedor */
+  animation: marquee 60s linear infinite;
+  font-size: 64px
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%); /* Desplaza el contenido a la mitad */
+    transform: translateX(-100%);
   }
 }

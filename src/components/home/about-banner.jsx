@@ -3,10 +3,12 @@ import bannerImage from "../../../public/banner-about-image.png"
 import InfiniteScrollText from "../utils/InfiniteScrollText"
 
 export default function AboutBanner() {
-  const texts = ["ABOUT MUSICAW3", "ABOUT MUSICAW3"];
+
+  const texts = ["Texto 1", "Texto 2", "Texto 3", "Texto 4"];
+
   return(
-    <div className="w-full h-full">
-      <p className="text-8xl">About MusicaW3</p>
+    <div className="w-full h-full">      
+        <InfiniteScrollText texts={texts} />
       <div className="realtive bg-[url('/about-banner-textura.png')]  pt-8 pb-16 lg:pt-12 lg:pb-20 overflow-hidden lg:px-48 bg-cover" >
         <div className="flex flex-row">
           <div className="w-full flex items-center justify-center">

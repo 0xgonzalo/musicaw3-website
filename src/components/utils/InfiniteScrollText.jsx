@@ -1,20 +1,11 @@
 import React from 'react';
-import '../styles/InfiniteScrollText.module.css';
+import styles from '../styles/InfiniteScrollText.module.css';
 
-const InfiniteScrollText = ({ texts }) => {
+const InfiniteScrollText = () => {
   return (
-    <div className="marquee">
-      <div className="marquee-content">
-        {texts.map((text, index) => (
-          <span key={index} className="mx-4">
-            {text}
-          </span>
-        ))}
-        {texts.map((text, index) => (
-          <span key={`duplicate-${index}`} className="mx-4">
-            {text}
-          </span>
-        ))}
+    <div className="overflow-hidden whitespace-nowrap">
+      <div className={styles.marquee}>
+        <p className="font-stretchFont"> ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 </p>
       </div>
     </div>
   );

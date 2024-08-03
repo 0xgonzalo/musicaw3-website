@@ -1,5 +1,7 @@
+"use client"
 import React, { useRef } from 'react';
 import { PlayIcon, PauseIcon, PrevIcon, NextIcon} from '../icons.jsx';
+import styles from "../../styles/player.module.css"
 
 const AudioPlayer = ({audioElem, isplaying, setisplaying, currentSong, setCurrentSong, songs})=> {
 
@@ -54,19 +56,19 @@ const AudioPlayer = ({audioElem, isplaying, setisplaying, currentSong, setCurren
   }
 
   return (
-    <div className='player_container'>
-      <div className="title">
+    <div className={styles.player_container}>
+      <div className={styles.title}>
         <p>{currentSong.title}</p>
       </div>
-      <div className="navigation">
-        <div className="navigation_wrapper" onClick={checkWidth} ref={clickRef}>
-          <div className="seek_bar" style={{width: `${currentSong.progress+"%"}`}}></div>
+      <div className={styles.navigation}>
+        <div className={styles.navigation_wrapper} onClick={checkWidth} ref={clickRef}>
+          <div className={styles.seek_bar} style={{width: `${currentSong.progress+"%"}`}}></div>
         </div>
       </div>
-      <div className="controls">
-        <PrevIcon className='btn_action' onClick={skipBack}/>
-        {isplaying ? <PlayIcon className='btn_action pp' onClick={PlayPause}/> : <PauseIcon className='btn_action pp' onClick={PlayPause}/>}
-        <NextIcon className='btn_action' onClick={skiptoNext}/>        
+      <div className={styles.controls}>
+        <PrevIcon className={styles.btn_action} onClick={skipBack}/>
+        {isplaying ? <PlayIcon className={styles.btn_action} onClick={PlayPause}/> : <PauseIcon className={styles.btn_action} onClick={PlayPause}/>}
+        <NextIcon className={styles.btn_action} onClick={skiptoNext}/>        
       </div>
     </div>
   
