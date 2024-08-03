@@ -1,10 +1,12 @@
 import Image from "next/image"             
 import bannerImage from "../../../public/banner-about-image.png"
+import InfiniteScrollText from "../utils/InfiniteScrollText"
 
 export default function AboutBanner() {
+  const texts = ["ABOUT MUSICAW3", "ABOUT MUSICAW3"];
   return(
     <div className="w-full h-full">
-      <p className="text-4xl"> ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3 ABOUT MUSICAW3</p>
+      <p className="text-8xl">About MusicaW3</p>
       <div className="realtive bg-[url('/about-banner-textura.png')]  pt-8 pb-16 lg:pt-12 lg:pb-20 overflow-hidden lg:px-48 bg-cover" >
         <div className="flex flex-row">
           <div className="w-full flex items-center justify-center">
