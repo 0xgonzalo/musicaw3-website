@@ -22,7 +22,7 @@ export default function AboutBanner() {
                             gap-y-12
                             px-2 lg:px-24 py-8 lg:py-12">
               <div className="col-span-2 w-full h-full flex flex-col items-center justify-center px-4">
-                <h2 className={`font-[made-tommy-soft-bold] text-center lg:text-left text-6xl lg:text-8xl text-dark drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] max-w-screen-sm`}>MUSICAW3</h2>
+                <h2 className={` font-stretchFont text-center lg:text-left text-6xl lg:text-8xl text-dark drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] max-w-screen-sm`}>MUSICAW3</h2>
                 <p className="text-center w-[704px]">We are a community of independent Latin American musicians dedicated to promoting education, support and spread awareness of the collaborative effects of Web3 music networks in spanish. 
                   You can find us daily organizing discussions and debates on blockchain technology over different social media platforms and giving free content to new and advanced web3 users on how to leverage 
                   these tools for more sustainable careers through onchain songs creation and Network Effects. </p>
