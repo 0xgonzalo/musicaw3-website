@@ -8,7 +8,7 @@ import Carousel from "@/components/utils/carousel";
 import AudioPlayer from "@/components/utils/Player/AudioPlayer";
 import songsdata from "@/components/utils/Player/audios.js";
 import { useRef, useState, useEffect } from 'react';
-
+import OasisBanner from "@/components/home/oasis-banner";
 export default function Home() {
 
   // const [songs, setSongs] = useState(songsdata);
@@ -39,6 +39,7 @@ export default function Home() {
         <HomeBanner />
         <AboutBanner />
         <Carousel />
+        <OasisBanner />
         <EventsBanner />
         <DropsBanner />
         <FoundersBanner />

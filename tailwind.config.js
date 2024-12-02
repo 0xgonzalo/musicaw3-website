@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        "stretch-pro": 'stretch-pro'  
+        stretchFont: 'stretch-pro'  
       }
     },
   },

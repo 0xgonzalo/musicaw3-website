@@ -7,7 +7,7 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  gap: 3em;
+  gap: 2em;
   overflow: auto;
 }
 

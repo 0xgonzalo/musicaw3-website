@@ -7,7 +7,7 @@ export default function AboutBanner() {
   return(
     <div className="w-full h-full">
       <p className="text-8xl">About MusicaW3</p>
-      <div className="realtive bg-[url('/about-banner-textura.png')]  pt-8 pb-16 lg:pt-12 lg:pb-20 overflow-hidden lg:px-48 bg-cover" >
+      <div className="realtive bg-[url('/about-banner-textura.png')]  pt-8 pb-16 lg:pt-12 lg:pb-20 overflow-hidden lg:px-24 bg-cover" >
         <div className="flex flex-row">
           <div className="w-full flex items-center justify-center">
                 <Image
@@ -16,16 +16,16 @@ export default function AboutBanner() {
                 />
               </div>
             <div className="w-full h-full
-                            grid grid-cols-1 lg:grid-cols-3
+                            grid grid-cols-1
                             gap-y-12
-                            px-2 lg:px-24 py-8 lg:py-12">
+                            px-2  py-8 lg:py-12">
               <div className="col-span-2 w-full h-full flex flex-col items-center justify-center px-4">
-                <h2 className={`font-[made-tommy-soft-bold] text-center lg:text-left text-6xl lg:text-8xl text-dark drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] max-w-screen-sm`}>MUSICAW3</h2>
-                <p className="text-center w-[704px]">We are a community of independent Latin American musicians dedicated to promoting education, support and spread awareness of the collaborative effects of Web3 music networks in spanish. 
+                <h2 className={`font-stretchFont text-center lg:text-left text-4xl lg:text-6xl text-dark drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] max-w-screen-sm pb-4`}>MUSICAW3</h2>
+                <p className="text-center ">We are a community of independent Latin American musicians dedicated to promoting education, support and spread awareness of the collaborative effects of Web3 music networks in spanish. 
                   You can find us daily organizing discussions and debates on blockchain technology over different social media platforms and giving free content to new and advanced web3 users on how to leverage 
                   these tools for more sustainable careers through onchain songs creation and Network Effects. </p>
                 <br />
-                <p className="text-center w-[704px]">Our main goal is to cultivate an inclusive and mutually beneficial environment for everyone involved, welcoming new individuals into the ecosystem, including fans, holders, tech enthusiasts, 
+                <p className="text-center ">Our main goal is to cultivate an inclusive and mutually beneficial environment for everyone involved, welcoming new individuals into the ecosystem, including fans, holders, tech enthusiasts, 
                   musicians, producers, managers, and anyone who wants to participate. We achieve this through streaming programs, interviews, metaverse events, IRL festivals, fostering web3 culture in our cities, 
                   and encouraging people to collaborate with us on our onchain releases.</p>
               </div>
