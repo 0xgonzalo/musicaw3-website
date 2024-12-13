@@ -1,0 +1,31 @@
+.rhap_container {
+    text-align: center;
+    background: linear-gradient(to right, #000, #444, #333, #000);
+    color: #fff;
+  }
+  
+  .rhap_progress_bar {
+    background-color: #fff;
+  }  
+
+.rhap_time{
+    color: #fff !important;
+    padding-left: 32px;
+}
+
+  .rhap_current-time{
+    color: #fff;
+    background-color: #fff;
+  }
+
+  .rhap_volume-bar {
+    background-color: #000;
+  }
+
+  .rhap_volume_container {
+    margin-right: 1200px;
+  }
+  
+  #rhap_current-time{
+    color: #fff;
+  }

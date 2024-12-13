@@ -11,28 +11,7 @@ import { useRef, useState, useEffect } from 'react';
 import OasisBanner from "@/components/home/oasis-banner";
 export default function Home() {
 
-  // const [songs, setSongs] = useState(songsdata);
-  // const [isplaying, setisplaying] = useState(false);
-  // const [currentSong, setCurrentSong] = useState(songsdata[0]);
 
-  // const audioElem = useRef();
-
-  // useEffect(() => {
-  //   if (isplaying) {
-  //     audioElem.current.play();
-  //   }
-  //   else {
-  //     audioElem.current.pause();
-  //   }
-  // }, [isplaying, currentSong])
-
-  // const onPlaying = () => {
-  //   const duration = audioElem.current.duration;
-  //   const ct = audioElem.current.currentTime;
-
-  //   setCurrentSong({ ...currentSong, "progress": ct / duration * 100, "length": duration })
-
-  // }
   return (
     <main className="flex min-h-screen flex-col items-center">
       <div className="min-w-screen max-w-screen overflow-hidden h-full flex flex-col items-center">

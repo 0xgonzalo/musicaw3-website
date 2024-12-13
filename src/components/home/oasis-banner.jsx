@@ -1,5 +1,5 @@
 import Image from "next/image"             
-import bannerImage from "../../../public/oasis-banner.png"
+import bannerImage from "../../../public/oasis-banner.jpg"
 
 export default function OasisBanner() {
   return(
@@ -12,7 +12,7 @@ export default function OasisBanner() {
                 <button className="bg-[#741E89] border border-[#500E61] rounded-[32px] w-[224px] py-4">Get Started</button>
             </div>
             <div className="w-full ">
-              <Image src={bannerImage} alt="Oasis Banner" width={'523px'} height={'380px'} />
+              <Image src={bannerImage} alt="Oasis Banner" width={525} height={380} />
             </div>
         </div>
         <p className=" pb-2 pt-[88px]">In Parnership with</p>

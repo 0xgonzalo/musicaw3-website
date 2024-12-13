@@ -18,6 +18,10 @@ export default function Carousel() {
     {
       source: "/carousel/4.png",
       title: "Evento MusicaW3"
+    },
+    {
+      source: "/carousel/3.png",
+      title: "MusicaW3 listening point"
     }
   ]
 
