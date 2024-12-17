@@ -61,6 +61,13 @@ const dropList = [
     "title": "Collective Drop 09",
     "description" : "Este es el genesis de Música W3 y el primer drop colectivo hecho con música de artistas de la comunidad. Presentado en la red de Zora el 17 de Agosto de 2023, inicia el primero de muchos lanzamientos realizados por la comunidad.",
     "link": "https://drip.haus/musicaw3/set/7418cdbc-e982-4426-bd33-c086bf4acbac"
+  },
+  {
+    "id": "10",
+    "location": "/drops/10.jpg",
+    "title": "Collective Drop 10",
+    "description" : "Este es el genesis de Música W3 y el primer drop colectivo hecho con música de artistas de la comunidad. Presentado en la red de Zora el 17 de Agosto de 2023, inicia el primero de muchos lanzamientos realizados por la comunidad.",
+    "link": "https://zora.co/collect/zora:0x551cf427fa22827d4f0ab89bbe7f17f62aafb88d"
   }
 ]
 
