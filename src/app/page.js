@@ -13,8 +13,8 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="min-w-screen max-w-screen overflow-hidden h-full flex flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center overflow-hidden">
+      <div className="min-w-screen max-w-screen  h-full flex flex-col items-center">
         <HomeBanner />
         <AboutBanner />
         <Carousel />

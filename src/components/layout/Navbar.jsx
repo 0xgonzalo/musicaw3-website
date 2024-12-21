@@ -25,13 +25,13 @@ export default function Navbar() {
                           items-center
                           text-lg md:text-md font-bold`}>
           <li className="hover:opacity-80 transition duration-200">
-            <Link href='/about-us' onClick={() => setDisplayPhoneMenu(false)}>About</Link>
+            <Link href='#about' onClick={() => setDisplayPhoneMenu(false)}>About</Link>
           </li>
           <li className="hover:opacity-80 transition duration-200">
-            <Link href='/eventos' onClick={() => setDisplayPhoneMenu(false)}>Events</Link>
+            <Link href='#events' onClick={() => setDisplayPhoneMenu(false)}>Eventos</Link>
           </li>
           <li className="hover:opacity-80 transition duration-200">
-            <Link href='/egresados' onClick={() => setDisplayPhoneMenu(false)}>Drops</Link>
+            <Link href='#drops' onClick={() => setDisplayPhoneMenu(false)}>Drops</Link>
           </li>
         </ul>
       </div>

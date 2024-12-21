@@ -38,7 +38,7 @@ export default function ImageSlider({ images=[], children, filter=false, auto=tr
 
   return(
     <div className="relative w-full h-full">
-      <div className="flex flex-row w-full h-full overflow-hidden">
+      <div className="flex flex-row w-full h-full ">
         {
           images.map(
             (image, i) => (

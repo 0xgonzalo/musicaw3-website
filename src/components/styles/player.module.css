@@ -1,31 +1,130 @@
+/* Base container styles */
 .rhap_container {
-    text-align: center;
-    background: linear-gradient(to right, #000, #444, #333, #000);
-    color: #fff;
-  }
-  
-  .rhap_progress_bar {
-    background-color: #fff;
-  }  
-
-.rhap_time{
-    color: #fff !important;
-    padding-left: 32px;
+  text-align: center;
+  background: linear-gradient(to right, #000, #444, #333, #000);
+  color: #fff;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
-  .rhap_current-time{
-    color: #fff;
-    background-color: #fff;
-  }
+/* Progress bar */
+.rhap_progress-bar {
+  background-color: #fff !important;
+}
 
-  .rhap_volume-bar {
-    background-color: #000;
-  }
+.rhap_progress-filled {
+  background-color: #741E89 !important;
+}
 
-  .rhap_volume_container {
-    margin-right: 1200px;
+.rhap_progress-indicator {
+  background: #fff !important;
+}
+
+/* Time display */
+.rhap_time {
+  color: #fff !important;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .rhap_time {
+    font-size: 14px;
+    padding-left: 32px;
+  }
+}
+
+/* Volume controls */
+.rhap_volume-bar {
+  background-color: #000;
+}
+
+.rhap_volume-indicator {
+  background: #fff;
+}
+
+/* Main controls */
+.rhap_main-controls-button {
+  color: #fff !important;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .rhap_main-controls-button {
+    font-size: 24px;
+  }
+}
+
+/* Volume button */
+.rhap_volume-button {
+  color: #fff !important;
+}
+
+/* Controls layout */
+.rhap_controls-section {
+  flex: 1 1 auto !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+}
+
+/* Song title container */
+.song-title-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .song-title-container {
+    max-width: 300px;
+    font-size: 14px;
+    margin-right: 16px;
+  }
+}
+
+/* Controls container */
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 480px) {
+  .rhap_volume-controls {
+    display: none !important;
   }
   
-  #rhap_current-time{
-    color: #fff;
+  .rhap_progress-section {
+    margin: 0 4px !important;
   }
+  
+  .rhap_controls-section {
+    padding: 0 4px !important;
+  }
+}
+
+/* Custom progress bar container */
+.rhap_progress-container {
+  margin: 0 !important;
+  padding: 0 8px !important;
+}
+
+/* Ensure controls stay visible */
+.rhap_controls-section .rhap_main-controls {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Fix for stacked layout on mobile */
+.rhap_stacked-reverse .rhap_controls-section {
+  margin-bottom: 8px !important;
+}
