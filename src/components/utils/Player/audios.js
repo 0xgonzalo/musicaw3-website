@@ -1,8 +1,8 @@
 exports.songsdata = [
     {
-        "title": "0xGonzalo - Ex Nihilo",
-        "url": "/audios/ex-nihilo.mp3",
-        "link": "https://zora.co/collect/zora:0xf45677eb74ec1f09b8ee8e6a2edc2d539723116b/27"
+        "title": "NENX - Ven",
+        "url": "/audios/Nenx-ven.mp3",
+        "link": "https://drip.haus/musicaw3/set/7418cdbc-e982-4426-bd33-c086bf4acbac"
     },
     {
         "title": "Sol Siete - No Hace Falta",
@@ -15,9 +15,9 @@ exports.songsdata = [
         "link": "https://zora.co/collect/zora:0x4ba01bb20dfd00665d4594560c688005dad0bd7d/10"
     },
     {
-        "title": "Dpath feat Luneto - Orbitando",
-        "url": "/audios/orbitando.mp3",
-        "link": "https://zora.co/collect/zora:0x4ba01bb20dfd00665d4594560c688005dad0bd7d/12"
+        "title": "0xGonzalo - Ex Nihilo",
+        "url": "/audios/ex-nihilo.mp3",
+        "link": "https://zora.co/collect/zora:0xf45677eb74ec1f09b8ee8e6a2edc2d539723116b/27"
     },
     {
         "title": "Duo Dø - Juro Que",
@@ -40,8 +40,8 @@ exports.songsdata = [
         "link": "https://highlight.xyz/mint/base:0xA9B78665bC62e0aadbC1a951787B91eb8FFF103F:1"
     },
     {
-        "title": "NENX - Ven",
-        "url": "/audios/Nenx-ven.mp3",
-        "link": "https://drip.haus/musicaw3/set/7418cdbc-e982-4426-bd33-c086bf4acbac"
+        "title": "Dpath feat Luneto - Orbitando",
+        "url": "/audios/orbitando.mp3",
+        "link": "https://zora.co/collect/zora:0x4ba01bb20dfd00665d4594560c688005dad0bd7d/12"
     },
 ]

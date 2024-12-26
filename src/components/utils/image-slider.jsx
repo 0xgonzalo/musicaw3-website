@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { ArrowLeft, ArrowRight } from './icons';
  /**
   * Image slider que se adapta al tamaño del contenedor.
   * Los hijos aparecen en display absolute sobre las imágenes de fondo
@@ -52,8 +53,8 @@ export default function ImageSlider({ images=[], children, filter=false, auto=tr
         }
       </div>
       <img className="object-cover block w-full h-full" />
-      <button className="absolute block top-[50%] left-[3%] text-4xl opacity-80 hover:scale-[1.1] hover:opacity-100 transition duration-200 z-30 -translate-y-[50%]" onClick={() => flecha("atras")}> <img src="/img/icons/left_arrow.png" /> </button>
-			<button className="absolute block top-[50%] right-[3%] text-4xl opacity-80 hover:scale-[1.1] hover:opacity-100 transition duration-200 z-30 -translate-y-[50%]" onClick={() => flecha("adelante")}> <img src="/img/icons/right_arrow.png" /> </button>
+      <button className="absolute block top-[50%] left-[3%] text-4xl opacity-80 hover:scale-[1.1] hover:opacity-100 transition duration-200 z-30 -translate-y-[50%]" onClick={() => flecha("atras")}><ArrowLeft /></button>
+			<button className="absolute block top-[50%] right-[3%] text-4xl opacity-80 hover:scale-[1.1] hover:opacity-100 transition duration-200 z-30 -translate-y-[50%]" onClick={() => flecha("adelante")}><ArrowRight /></button>
     </div>
   );
 }
