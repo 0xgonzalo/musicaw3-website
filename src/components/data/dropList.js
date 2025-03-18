@@ -68,6 +68,13 @@ const dropList = [
     "title": "Drop Colectivo 10",
     "description" : "El Drop Colectivo Volumen 10 es la segunda colaboración que hicimos con Maskay Community. La idea fue hacer un drop exclusivo de música electronica y juntar a músicos con artistas visuales para presentar visualizadores de los temas. La curaduría fue por parte de los euqipos de las comunidades y tuvo su evento de presentación en Dunepark, Buenos Aires.",
     "link": "https://zora.co/collect/zora:0x551cf427fa22827d4f0ab89bbe7f17f62aafb88d"
+  },
+  {
+    "id": "11",
+    "location": "/drops/11.png",
+    "title": "Drop Colectivo 11",
+    "description" : "Drop fue realizado en colaboración con Mantle Network a través de la plataforma Highlight. La curaduría fue por primera vez realizada a través de un protocolo descentralizado de curaduría de los lanzamientos mediante el token de gobernanza de la comunidad.",
+    "link": "https://highlight.xyz/user/@musicaw3.eth"
   }
 ]
 

@@ -10,6 +10,8 @@ export default function DropSelector() {
       <a href="#07"><button className="text-center max-w-[132px] border rounded-md bg-black py-2 px-1 m-4 md:m-0 font-bold">Drop Colectivo Vol.7</button></a>
       <a href="#08"><button className="text-center max-w-[132px] border rounded-md bg-black py-2 px-1 font-bold">Drop Colectivo Vol.8</button></a>
       <a href="#09"><button className="text-center max-w-[132px] border rounded-md bg-black py-2 px-1 m-4 md:m-0 font-bold">Drop Colectivo Vol.9</button></a>
+      <a href="#10"><button className="text-center max-w-[132px] border rounded-md bg-black py-2 px-1 m-4 md:m-0 font-bold">Drop Colectivo Vol.10</button></a>
+      <a href="#11"><button className="text-center max-w-[132px] border rounded-md bg-black py-2 px-1 m-4 md:m-0 font-bold">Drop Colectivo Vol.11</button></a>
     </div>
   )
 }
