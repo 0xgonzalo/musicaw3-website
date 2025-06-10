@@ -75,6 +75,20 @@ const dropList = [
     "title": "Drop Colectivo 11",
     "description" : "Drop fue realizado en colaboración con Mantle Network a través de la plataforma Highlight. La curaduría fue por primera vez realizada a través de un protocolo descentralizado de curaduría de los lanzamientos mediante el token de gobernanza de la comunidad.",
     "link": "https://highlight.xyz/user/@musicaw3.eth"
+  },
+  {
+    "id": "12",
+    "location": "/drops/12.jpg",
+    "title": "Drop Colectivo 12",
+    "description" : "Segundo lanzamiento en la red de Solana en colaboración con la comunidad de One Love DAO. Con exhibiciones presenciales en Buenos Aires y Miami durante el Miami Music Week. ",
+    "link": "https://drip.haus/musicaw3/set/3bf6f688-5161-4629-84fa-a9a38aad7e97"
+  },
+  {
+    "id": "13",
+    "location": "/drops/13.jpg",
+    "title": "Drop Colectivo 13",
+    "description" : "Primer Drop colaborativo audiovisual de MusicaW3 en la red de Tezos, en la plataforma OBJKT. 8 artistas visuales colaborando con 8 músicos de la comunidad se unieron para dejarnos este nuevo lanzamiento.",
+    "link": "https://objkt.com/collections/KT1LycXSntN4ssPqsqUhR3wNYYu66vYAMcyd"
   }
 ]
 

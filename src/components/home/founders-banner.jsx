@@ -6,22 +6,7 @@ export default function FoundersBanner() {
     <div className="w-full h-full">
       <div className="flex flex-col justify-center items-center">
         <h2 className="font-stretchFont text-4xl md:text-8xl my-[96px]"> FOUNDERS </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[96px]">
-        <div className="relative group">
-          <Image
-                src={'/founders/yoshi.png'}
-                width={384}
-                height={384}
-                alt="Picture of the author"
-                layout="fixed"
-                className="rounded-full w-[300px] md:w-[384px] "
-              />
-          <div className="absolute top-0 left-0 w-[300px] md:w-full h-full bg-[#500E61] bg-opacity-50 flex items-center justify-center rounded-full hidden group-hover:block">
-            <Link href="https://twitter.com/yoshiromare" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center h-full">
-              <h3 className="text-white text-center">Yoshiro</h3>
-            </Link>
-          </div>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-[96px]">
         <div className="relative group">
           <Image
                 src={'/founders/gonza.png'}

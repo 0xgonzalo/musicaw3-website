@@ -9,7 +9,7 @@ export default function OasisBanner() {
                 <h2 className="text-2xl md:text-4xl font-bold ">Hacia la Soberanía de los creadores Onchain</h2>
                 <p>Nuestro programa integral para creadores onchain se encuentra disponible. Te brindamos todas las herramientas que puedas lograr que tu carrera como artista sea más sostenible.</p>
                 <p>Es 100% gratuito y cubrimos varios tópicos de interés para principiantes, intermedios y creadores avanzados</p>
-                <button className="bg-[#741E89] border border-[#500E61] rounded-[32px] md:w-[224px] py-4 mb-8 md:mb-0 mx-12 md:mx-0 m-4 md:my-0"> <a href="https://www.youtube.com/@Musica_W3" target="_blank">Ir al Curso</a></button>
+                <button className="bg-[#741E89] border border-[#500E61] rounded-[32px] md:w-[224px] py-4 mb-8 md:mb-0 mx-12 md:mx-0 m-4 md:my-0"> <a href="https://www.youtube.com/watch?v=apOk-QepQVY&list=PL8aLO5KNFLv2O1cS7OjPOt9YDN7drf1jf" target="_blank">Ir al Curso</a></button>
             </div>
             <div className="w-full pr-4">
               <Image src={bannerImage} alt="Oasis Banner" width={825} height={380} className="w-[380px] md:w-[825px] h-auto"/>
