@@ -9,6 +9,7 @@ import AudioPlayer from "@/components/utils/Player/AudioPlayer";
 import songsdata from "@/components/utils/Player/audios.js";
 import { useRef, useState, useEffect } from 'react';
 import OasisBanner from "@/components/home/oasis-banner";
+import FarcasterBanner from "@/components/home/farcaster-banner";
 export default function Home() {
 
 
@@ -19,6 +20,7 @@ export default function Home() {
         <AboutBanner />
         <Carousel />
         <OasisBanner />
+        <FarcasterBanner />
         <EventsBanner />
         <DropsBanner />
         <FoundersBanner />

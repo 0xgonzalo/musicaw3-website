@@ -1,11 +1,12 @@
-import { useRef } from "react";
+import { useState } from "react";
 
-export default function DropSelector() {
+export default function DropSelector({ onDropSelect }) {
+  const [selectedDrop, setSelectedDrop] = useState("");
+
   const handleSelect = (e) => {
-    const anchor = document.getElementById(e.target.value);
-    if (anchor) {
-      anchor.scrollIntoView({ behavior: "smooth" });
-    }
+    const value = e.target.value;
+    setSelectedDrop(value);
+    onDropSelect(value);
   };
 
   return (
@@ -13,7 +14,7 @@ export default function DropSelector() {
       <select
         className="text-center border rounded-md bg-black text-white py-2 px-4 font-bold max-w-xs"
         onChange={handleSelect}
-        defaultValue=""
+        value={selectedDrop}
       >
         <option value="" disabled>
           Selecciona un Drop
