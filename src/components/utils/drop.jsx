@@ -3,35 +3,58 @@ import Link from 'next/link'
 
 export default function Drop({ id, title, location, description, link }) {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:gap-[48px] my-16 md:my-32">
-        <h3 className="font-stretchFont text-4xl md:text-8xl mb-4 md:mb-0" id={id}>{id}</h3>
-        <Link href={link} target="_blank" rel="noopener noreferrer">
-        <div className="relative flex flex-col md:flex-row  items-center justify-center cursor-pointer gap-8 group" >
-          <div className="absolute inset-0 transition-all duration-300 opacity-0 group-hover:opacity-100 md:p-8 ">
-              <Image
-                src={`${location}`}
-                fill
-                className="object-cover blur-md brightness-75 md:m-4"
-                alt="Background blur effect"
-              />
-          </div>
-           
-          <div className=" relative md:flex items-center gap-8">
-              <Image
-                src={`${location}`}
-                width={336}
-                height={336}
-                alt="Picture of the author"
-              />
-            <div>
-              <h3 className="font-stretchFont text-2xl md:text-5xl mt-8 md:mt-0">{title}</h3>
-              <p className="max-w-[320px] md:max-w-[384px] text-center md:text-left my-4 font-light text-[12px]">{description}</p>
+    <div className="animate-fade-in">
+      <Link href={link} target="_blank" rel="noopener noreferrer" className="block">
+        <div className="glass-card p-6 md:p-8 group cursor-pointer hover:bg-white/[0.08] transition-all duration-500">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* Volume Number */}
+            <div className="flex-shrink-0">
+              <span className="font-stretchFont text-6xl md:text-8xl text-gradient-brand opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                {id}
+              </span>
+            </div>
+
+            {/* Album Art */}
+            <div className="relative flex-shrink-0">
+              <div className="absolute -inset-4 bg-brand-primary/20 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative overflow-hidden rounded-xl">
+                <Image
+                  src={location}
+                  width={280}
+                  height={280}
+                  alt={title}
+                  className="w-[240px] h-[240px] md:w-[280px] md:h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Play overlay */}
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
+                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <h3 className="font-stretchFont text-2xl md:text-4xl lg:text-5xl text-white mb-4 group-hover:text-gradient-brand transition-all duration-300">
+                {title}
+              </h3>
+              <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
+                {description}
+              </p>
+              {/* CTA */}
+              <div className="mt-6 inline-flex items-center gap-2 text-brand-accent group-hover:text-white transition-colors duration-300">
+                <span className="text-sm font-medium">Escuchar ahora</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
-        </Link>
-      </div>
+      </Link>
     </div>
   )
 }

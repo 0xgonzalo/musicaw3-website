@@ -1,29 +1,85 @@
-import Image from "next/image"             
+import Image from "next/image"
 import bannerImage from "../../../public/oasis-banner.jpg"
 
 export default function OasisBanner() {
+  const partners = [
+    { src: "/fundacion-blockchain-logo.png", alt: "Fundacion Blockchain Logo", width: 48 },
+    { src: "/oasis-logo.png", alt: "Oasis Logo", width: 135 },
+    { src: "/thanks-arbitrum-logo.png", alt: "Thanks Arbitrum Logo", width: 48 },
+  ];
+
   return(
-    <div className="w-full h-full md:ml-[160px]">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-x-12">
-            <div className="flex flex-col gap-y-4 text-center md:text-left">
-                <h2 className="text-2xl md:text-4xl font-bold ">Hacia la Soberanía de los creadores Onchain</h2>
-                <p>Nuestro programa integral para creadores onchain se encuentra disponible. Te brindamos todas las herramientas que puedas lograr que tu carrera como artista sea más sostenible.</p>
-                <p>Es 100% gratuito y cubrimos varios tópicos de interés para principiantes, intermedios y creadores avanzados</p>
-                <button className="bg-[#741E89] border border-[#500E61] rounded-[32px] md:w-[224px] py-4 mb-8 md:mb-0 mx-12 md:mx-0 m-4 md:my-0"> <a href="https://www.youtube.com/watch?v=apOk-QepQVY&list=PL8aLO5KNFLv2O1cS7OjPOt9YDN7drf1jf" target="_blank">Ir al Curso</a></button>
+    <section className="relative w-full py-24 md:py-32 overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-darker via-black to-brand-darker" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-brand-primary/15 rounded-full blur-[150px] translate-x-1/2 -translate-y-1/2" />
+
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+          {/* Image */}
+          <div className="relative w-full lg:w-1/2 flex-shrink-0">
+            <div className="absolute -inset-4 bg-gradient-to-br from-brand-accent/20 via-transparent to-brand-primary/20 rounded-3xl blur-2xl" />
+            <div className="relative glass-card p-2 md:p-3 overflow-hidden">
+              <Image
+                src={bannerImage}
+                alt="Oasis Banner"
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
-            <div className="w-full pr-4">
-              <Image src={bannerImage} alt="Oasis Banner" width={825} height={380} className="w-[380px] md:w-[825px] h-auto"/>
+          </div>
+
+          {/* Content */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <div className="space-y-2">
+              <span className="text-brand-accent text-sm font-medium tracking-widest uppercase">
+                Programa Educativo
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                <span className="section-heading">Hacia la Soberanía</span>
+                <br />
+                <span className="text-white">de los Creadores Onchain</span>
+              </h2>
             </div>
-        </div>
-        <p className=" pb-2 pt-[88px] hidden md:block">In Parnership with</p>
-        <div className="hidden md:block" style={{width: '90%', height: '80px', position: 'relative'}}>
-          <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, #391242 0%, #641B76 50%, #391242 96%)', filter: 'blur(8px)'}}></div>
-          <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
-            <img src="/fundacion-blockchain-logo.png" alt="Fundacion Blockchain Logo" style={{width: '48px', height: 'auto'}} />
-            <img src="/oasis-logo.png" alt="Oasis Logo" style={{width: '135px', height: 'auto'}} />
-            <img src="/thanks-arbitrum-logo.png" alt="Thanks Arbitrum Logo" style={{width: '48px', height: 'auto'}} />
+
+            <div className="space-y-4 text-white/70 text-base md:text-lg leading-relaxed">
+              <p>
+                Nuestro programa integral para creadores onchain se encuentra disponible. Te brindamos todas las herramientas que puedas lograr que tu carrera como artista sea más sostenible.
+              </p>
+              <p>
+                Es 100% gratuito y cubrimos varios tópicos de interés para principiantes, intermedios y creadores avanzados.
+              </p>
+            </div>
+
+            <a
+              href="https://www.youtube.com/watch?v=apOk-QepQVY&list=PL8aLO5KNFLv2O1cS7OjPOt9YDN7drf1jf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-button inline-flex items-center justify-center gap-2 w-fit mt-2"
+            >
+              <span>Ir al Curso</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+
+            {/* Partners */}
+            <div className="pt-8 mt-4 border-t border-white/10">
+              <p className="text-white/40 text-sm mb-6 tracking-wide">In Partnership with</p>
+              <div className="glass-card p-6 flex items-center justify-around gap-8">
+                {partners.map((partner) => (
+                  <img
+                    key={partner.alt}
+                    src={partner.src}
+                    alt={partner.alt}
+                    style={{ width: partner.width }}
+                    className="h-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-    </div>
+      </div>
+    </section>
   )
 }

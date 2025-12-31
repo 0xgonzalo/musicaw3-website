@@ -1,53 +1,82 @@
-/* Base container styles */
+/* Base container styles - Glassmorphism */
 .rhap_container {
   text-align: center;
-  background: linear-gradient(to right, #000, #444, #333, #000);
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   width: 100%;
   max-width: 100%;
-  padding: 8px;
+  padding: 12px 16px;
   box-sizing: border-box;
 }
 
 /* Progress bar */
 .rhap_progress-bar {
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 4px !important;
+  height: 4px !important;
 }
 
 .rhap_progress-filled {
-  background-color: #741E89 !important;
+  background: linear-gradient(90deg, #8b2fa0 0%, #a855f7 100%) !important;
+  border-radius: 4px !important;
 }
 
 .rhap_progress-indicator {
   background: #fff !important;
+  width: 12px !important;
+  height: 12px !important;
+  top: -4px !important;
+  box-shadow: 0 2px 8px rgba(139, 47, 160, 0.5) !important;
 }
 
 /* Time display */
 .rhap_time {
-  color: #fff !important;
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
   .rhap_time {
-    font-size: 14px;
-    padding-left: 32px;
+    font-size: 12px;
+    padding-left: 24px;
   }
 }
 
 /* Volume controls */
 .rhap_volume-bar {
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 4px !important;
+}
+
+.rhap_volume-filled {
+  background: linear-gradient(90deg, #8b2fa0 0%, #a855f7 100%) !important;
+  border-radius: 4px !important;
 }
 
 .rhap_volume-indicator {
-  background: #fff;
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(139, 47, 160, 0.5) !important;
 }
 
 /* Main controls */
 .rhap_main-controls-button {
-  color: #fff !important;
+  color: rgba(255, 255, 255, 0.8) !important;
   font-size: 20px;
+  transition: all 0.2s ease !important;
+}
+
+.rhap_main-controls-button:hover {
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+.rhap_play-pause-button {
+  width: 44px !important;
+  height: 44px !important;
 }
 
 @media (min-width: 768px) {
@@ -58,6 +87,11 @@
 
 /* Volume button */
 .rhap_volume-button {
+  color: rgba(255, 255, 255, 0.6) !important;
+  transition: all 0.2s ease !important;
+}
+
+.rhap_volume-button:hover {
   color: #fff !important;
 }
 
@@ -65,7 +99,7 @@
 .rhap_controls-section {
   flex: 1 1 auto !important;
   margin: 0 !important;
-  padding: 0 8px !important;
+  padding: 0 12px !important;
 }
 
 /* Song title container */
@@ -100,11 +134,11 @@
   .rhap_volume-controls {
     display: none !important;
   }
-  
+
   .rhap_progress-section {
     margin: 0 4px !important;
   }
-  
+
   .rhap_controls-section {
     padding: 0 4px !important;
   }
@@ -127,4 +161,20 @@
 /* Fix for stacked layout on mobile */
 .rhap_stacked-reverse .rhap_controls-section {
   margin-bottom: 8px !important;
+}
+
+/* Skip buttons */
+.rhap_skip-button {
+  color: rgba(255, 255, 255, 0.6) !important;
+  transition: all 0.2s ease !important;
+}
+
+.rhap_skip-button:hover {
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+/* Progress section hover effect */
+.rhap_progress-section:hover .rhap_progress-indicator {
+  transform: scale(1.2);
 }

@@ -1,36 +1,67 @@
-import Image from "next/image"             
+import Image from "next/image"
 import bannerImage from "../../../public/banner-about-image.png"
 
 export default function AboutBanner() {
   return(
-    <div className="w-full h-full">
-      <div className="realtive bg-[url('/about-banner-textura.png')]  pt-8 pb-16 lg:pt-12 lg:pb-20  lg:px-24 bg-cover" >
-        <div className="flex flex-col md:flex-row" id="about">
-          <div className="w-full flex items-center justify-center">
-                <Image
-                  src={bannerImage}
-                  alt="Foto de la Comunidad"
-                />
+    <section className="relative w-full py-24 md:py-32 overflow-hidden" id="about">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-brand-darker to-black" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-primary/30 to-transparent" />
+      <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-[200px] -translate-x-1/2 -translate-y-1/2" />
+
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          {/* Image with glass frame */}
+          <div className="relative w-full lg:w-1/2 flex-shrink-0">
+            <div className="absolute -inset-4 bg-gradient-to-br from-brand-primary/20 via-transparent to-brand-accent/20 rounded-3xl blur-2xl" />
+            <div className="relative glass-card p-2 md:p-3">
+              <Image
+                src={bannerImage}
+                alt="Foto de la Comunidad"
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
           </div>
-          <div className="w-full h-full
-                            grid grid-cols-1
-                            gap-y-12
-                            px-2  py-8 lg:py-12">
-              <div className="col-span-2 w-full h-full flex flex-col items-center justify-center px-4">
-                <h2 className={`font-stretchFont text-center lg:text-left text-4xl md:text-6xl lg:text-6xl text-dark drop-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] max-w-screen-sm pb-4`}>MUSICAW3</h2>
-                <p className="text-center">{/*We are a community of independent Latin American musicians dedicated to promoting education, support and spread awareness of the collaborative effects of Web3 music networks in spanish. 
-                  You can find us daily organizing discussions and debates on blockchain technology over different social media platforms and giving free content to new and advanced web3 users on how to leverage 
-                  these tools for more sustainable careers through onchain songs creation and Network Effects.*/} Somos una comunidad de músicos independientes de América Latina dedicados a promover la educación, el apoyo y la concienciación sobre los efectos colaborativos de las redes musicales en Web3 en español.
-Nos encuentras diariamente organizando discusiones y debates sobre tecnología blockchain en diversas plataformas de redes sociales, además de ofrecer contenido gratuito para usuarios nuevos y avanzados de Web3 sobre cómo aprovechar estas herramientas para carreras más sostenibles mediante la creación de canciones en la blockchain y los network effects.</p> 
-                <br />
-                <p className="text-center ">{/* Our main goal is to cultivate an inclusive and mutually beneficial environment for everyone involved, welcoming new individuals into the ecosystem, including fans, holders, tech enthusiasts, 
-                  musicians, producers, managers, and anyone who wants to participate. We achieve this through streaming programs, interviews, metaverse events, IRL festivals, fostering web3 culture in our cities, 
-                  and encouraging people to collaborate with us on our onchain releases. */}Nuestro principal objetivo es cultivar un entorno inclusivo y mutuamente beneficioso para todos los involucrados, dando la bienvenida a nuevas personas en el ecosistema, incluidos fanáticos, holders, entusiastas tecnológicos, músicos, productores, gestores y cualquier persona interesada en participar.
-Logramos esto a través de programas de streaming, entrevistas, eventos en el metaverso, festivales presenciales, fomentando la cultura web3 en nuestras ciudades e incentivando a las personas a colaborar con nosotros en nuestros lanzamientos en la blockchain. </p>
-              </div>
+
+          {/* Content */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-8">
+            <div className="space-y-2">
+              <span className="text-brand-accent text-sm font-medium tracking-widest uppercase">
+                Nuestra Comunidad
+              </span>
+              <h2 className="font-stretchFont text-4xl md:text-5xl lg:text-6xl section-heading">
+                MUSICAW3
+              </h2>
+            </div>
+
+            <div className="space-y-6 text-white/70 text-base md:text-lg leading-relaxed">
+              <p>
+                Somos una comunidad de músicos independientes de América Latina dedicados a promover la educación, el apoyo y la concienciación sobre los efectos colaborativos de las redes musicales en Web3 en español.
+              </p>
+              <p>
+                Nos encuentras diariamente organizando discusiones y debates sobre tecnología blockchain en diversas plataformas de redes sociales, además de ofrecer contenido gratuito para usuarios nuevos y avanzados de Web3 sobre cómo aprovechar estas herramientas para carreras más sostenibles mediante la creación de canciones en la blockchain y los network effects.
+              </p>
+              <p>
+                Nuestro principal objetivo es cultivar un entorno inclusivo y mutuamente beneficioso para todos los involucrados, dando la bienvenida a nuevas personas en el ecosistema, incluidos fanáticos, holders, entusiastas tecnológicos, músicos, productores, gestores y cualquier persona interesada en participar.
+              </p>
+            </div>
+
+            {/* Stats or highlights */}
+            <div className="grid grid-cols-3 gap-4 pt-4">
+              {[
+                { value: "+2k", label: "Collectors" },
+                { value: "+150", label: "Artistas" },
+                { value: "+5k", label: "Comunidad" }
+              ].map((stat) => (
+                <div key={stat.label} className="glass-card p-4 text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-gradient-brand">{stat.value}</div>
+                  <div className="text-white/50 text-sm mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

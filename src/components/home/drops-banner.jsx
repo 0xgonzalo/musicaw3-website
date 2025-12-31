@@ -13,17 +13,47 @@ export default function DropsBanner() {
   const selectedDrop = dropList.find(drop => drop.id === selectedDropId);
 
   return(
-    <div className="w-full h-full">
-      <div className="flex flex-col justify-center text-center items-center">
-        <h2 className="font-stretchFont text-4xl md:text-8xl mt-[96px]" id="drops"> DROPS </h2>
-        <p className="max-w-[830px] lg:max-w-[1040px] py-[48px]">Los lanzamientos colectivos de MúsicaW3 son publicaciones mensuales en las que reunimos a artistas consolidados dentro del ecosistema web3 junto con nuevos talentos y músicos atraídos por la comunidad. Creemos que es vital crear espacios promocionales donde el apoyo y los efectos de red colaborativos sean expansivos para todos los participantes.</p>
-        <DropSelector onDropSelect={handleDropSelect} />
-        <div>
-          {selectedDrop && <Drop {...selectedDrop} />}
+    <section className="relative w-full py-24 md:py-32 overflow-hidden" id="drops">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-brand-darker to-black" />
+      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[180px] translate-x-1/2" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-brand-accent/10 rounded-full blur-[150px] -translate-x-1/2" />
+
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="text-brand-accent text-sm font-medium tracking-widest uppercase mb-4 block">
+            Lanzamientos Colectivos
+          </span>
+          <h2 className="font-stretchFont text-5xl md:text-7xl lg:text-8xl section-heading mb-8">
+            DROPS
+          </h2>
+          <p className="max-w-3xl mx-auto text-white/60 text-base md:text-lg leading-relaxed">
+            Los lanzamientos colectivos de MúsicaW3 son publicaciones mensuales en las que reunimos a artistas consolidados dentro del ecosistema web3 junto con nuevos talentos y músicos atraídos por la comunidad. Creemos que es vital crear espacios promocionales donde el apoyo y los efectos de red colaborativos sean expansivos para todos los participantes.
+          </p>
+        </div>
+
+        {/* Drop Selector */}
+        <div className="flex justify-center mb-12">
+          <DropSelector onDropSelect={handleDropSelect} />
+        </div>
+
+        {/* Selected Drop */}
+        <div className="min-h-[200px]">
+          {selectedDrop ? (
+            <Drop {...selectedDrop} />
+          ) : (
+            <div className="flex flex-col items-center justify-center py-16 text-center">
+              <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                <svg className="w-10 h-10 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                </svg>
+              </div>
+              <p className="text-white/40 text-lg">Selecciona un drop para ver más detalles</p>
+            </div>
+          )}
         </div>
       </div>
-      <div>
-      </div>
-    </div>
+    </section>
   )
 }
