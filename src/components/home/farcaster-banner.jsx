@@ -1,7 +1,11 @@
+'use client';
 import Image from "next/image"
 import bannerImage from "../../../public/farcaster-banner.jpeg"
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function FarcasterBanner() {
+  const { t } = useLanguage();
+
   return(
     <section className="relative w-full py-24 md:py-32 overflow-hidden">
       {/* Background effects */}
@@ -26,20 +30,16 @@ export default function FarcasterBanner() {
           <div className="w-full lg:w-1/2 flex flex-col gap-6">
             <div className="space-y-2">
               <span className="text-purple-400 text-sm font-medium tracking-widest uppercase">
-                Masterclass
+                {t.farcaster.subtitle}
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight section-heading">
-                Conectando con la Comunidad Farcaster
+                {t.farcaster.title}
               </h2>
             </div>
 
             <div className="space-y-4 text-white/70 text-base md:text-lg leading-relaxed">
-              <p>
-                Ya está disponible nuestra Masterclass sobre Farcaster y cómo monetizar siendo creador.
-              </p>
-              <p>
-                Farcaster es una red social descentralizada que permite a los usuarios crear y compartir contenido de forma libre y sin censura.
-              </p>
+              <p>{t.farcaster.description1}</p>
+              <p>{t.farcaster.description2}</p>
             </div>
 
             <a
@@ -51,7 +51,7 @@ export default function FarcasterBanner() {
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
               </svg>
-              <span>Ver Masterclass</span>
+              <span>{t.farcaster.cta}</span>
             </a>
           </div>
         </div>

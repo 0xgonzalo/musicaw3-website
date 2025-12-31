@@ -1,7 +1,17 @@
+'use client';
 import Image from "next/image"
 import bannerImage from "../../../public/banner-about-image.png"
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function AboutBanner() {
+  const { t } = useLanguage();
+
+  const stats = [
+    { value: "+2k", label: "Collectors" },
+    { value: "+150", label: t.about.stats.artists },
+    { value: "+5k", label: t.about.stats.community }
+  ];
+
   return(
     <section className="relative w-full py-24 md:py-32 overflow-hidden" id="about">
       {/* Background effects */}
@@ -27,7 +37,7 @@ export default function AboutBanner() {
           <div className="w-full lg:w-1/2 flex flex-col gap-8">
             <div className="space-y-2">
               <span className="text-brand-accent text-sm font-medium tracking-widest uppercase">
-                Nuestra Comunidad
+                {t.about.subtitle}
               </span>
               <h2 className="font-stretchFont text-4xl md:text-5xl lg:text-6xl section-heading">
                 MUSICAW3
@@ -35,24 +45,14 @@ export default function AboutBanner() {
             </div>
 
             <div className="space-y-6 text-white/70 text-base md:text-lg leading-relaxed">
-              <p>
-                Somos una comunidad de músicos independientes de América Latina dedicados a promover la educación, el apoyo y la concienciación sobre los efectos colaborativos de las redes musicales en Web3 en español.
-              </p>
-              <p>
-                Nos encuentras diariamente organizando discusiones y debates sobre tecnología blockchain en diversas plataformas de redes sociales, además de ofrecer contenido gratuito para usuarios nuevos y avanzados de Web3 sobre cómo aprovechar estas herramientas para carreras más sostenibles mediante la creación de canciones en la blockchain y los network effects.
-              </p>
-              <p>
-                Nuestro principal objetivo es cultivar un entorno inclusivo y mutuamente beneficioso para todos los involucrados, dando la bienvenida a nuevas personas en el ecosistema, incluidos fanáticos, holders, entusiastas tecnológicos, músicos, productores, gestores y cualquier persona interesada en participar.
-              </p>
+              <p>{t.about.description1}</p>
+              <p>{t.about.description2}</p>
+              <p>{t.about.description3}</p>
             </div>
 
             {/* Stats or highlights */}
             <div className="grid grid-cols-3 gap-4 pt-4">
-              {[
-                { value: "+2k", label: "Collectors" },
-                { value: "+150", label: "Artistas" },
-                { value: "+5k", label: "Comunidad" }
-              ].map((stat) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="glass-card p-4 text-center">
                   <div className="text-2xl md:text-3xl font-bold text-gradient-brand">{stat.value}</div>
                   <div className="text-white/50 text-sm mt-1">{stat.label}</div>

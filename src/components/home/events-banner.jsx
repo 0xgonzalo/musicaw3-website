@@ -1,6 +1,10 @@
+'use client';
 import Masonry from "../utils/masonry";
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function EventsBanner() {
+  const { t } = useLanguage();
+
   return(
     <section className="relative w-full py-24 md:py-32 overflow-hidden" id="events">
       {/* Background effects */}
@@ -11,10 +15,10 @@ export default function EventsBanner() {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-brand-accent text-sm font-medium tracking-widest uppercase mb-4 block">
-            Nuestra Historia
+            {t.events.subtitle}
           </span>
           <h2 className="font-stretchFont text-5xl md:text-7xl lg:text-8xl section-heading">
-            EVENTOS
+            {t.events.title}
           </h2>
         </div>
 

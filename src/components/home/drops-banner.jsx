@@ -1,10 +1,13 @@
+'use client';
 import { useState } from "react";
 import Drop from "../utils/drop";
 import DropSelector from "../utils/dropSelector";
 import dropList from "@/components/data/dropList.js"
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function DropsBanner() {
   const [selectedDropId, setSelectedDropId] = useState("");
+  const { t } = useLanguage();
 
   const handleDropSelect = (dropId) => {
     setSelectedDropId(dropId);
@@ -23,13 +26,13 @@ export default function DropsBanner() {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-brand-accent text-sm font-medium tracking-widest uppercase mb-4 block">
-            Lanzamientos Colectivos
+            {t.drops.subtitle}
           </span>
           <h2 className="font-stretchFont text-5xl md:text-7xl lg:text-8xl section-heading mb-8">
-            DROPS
+            {t.drops.title}
           </h2>
           <p className="max-w-3xl mx-auto text-white/60 text-base md:text-lg leading-relaxed">
-            Los lanzamientos colectivos de MúsicaW3 son publicaciones mensuales en las que reunimos a artistas consolidados dentro del ecosistema web3 junto con nuevos talentos y músicos atraídos por la comunidad. Creemos que es vital crear espacios promocionales donde el apoyo y los efectos de red colaborativos sean expansivos para todos los participantes.
+            {t.drops.description}
           </p>
         </div>
 
@@ -49,7 +52,7 @@ export default function DropsBanner() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                 </svg>
               </div>
-              <p className="text-white/40 text-lg">Selecciona un drop para ver más detalles</p>
+              <p className="text-white/40 text-lg">{t.drops.emptyState}</p>
             </div>
           )}
         </div>

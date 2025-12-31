@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PlayerContainer from "@/components/utils/Player/PlayerContainer";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        <PlayerContainer />
-        {children}
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          <PlayerContainer />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

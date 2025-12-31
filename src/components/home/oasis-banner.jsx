@@ -1,7 +1,11 @@
+'use client';
 import Image from "next/image"
 import bannerImage from "../../../public/oasis-banner.jpg"
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function OasisBanner() {
+  const { t } = useLanguage();
+
   const partners = [
     { src: "/fundacion-blockchain-logo.png", alt: "Fundacion Blockchain Logo", width: 48 },
     { src: "/oasis-logo.png", alt: "Oasis Logo", width: 135 },
@@ -32,22 +36,18 @@ export default function OasisBanner() {
           <div className="w-full lg:w-1/2 flex flex-col gap-6">
             <div className="space-y-2">
               <span className="text-brand-accent text-sm font-medium tracking-widest uppercase">
-                Programa Educativo
+                {t.oasis.subtitle}
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="section-heading">Hacia la Soberanía</span>
+                <span className="section-heading">{t.oasis.title1}</span>
                 <br />
-                <span className="text-white">de los Creadores Onchain</span>
+                <span className="text-white">{t.oasis.title2}</span>
               </h2>
             </div>
 
             <div className="space-y-4 text-white/70 text-base md:text-lg leading-relaxed">
-              <p>
-                Nuestro programa integral para creadores onchain se encuentra disponible. Te brindamos todas las herramientas que puedas lograr que tu carrera como artista sea más sostenible.
-              </p>
-              <p>
-                Es 100% gratuito y cubrimos varios tópicos de interés para principiantes, intermedios y creadores avanzados.
-              </p>
+              <p>{t.oasis.description1}</p>
+              <p>{t.oasis.description2}</p>
             </div>
 
             <a
@@ -56,7 +56,7 @@ export default function OasisBanner() {
               rel="noopener noreferrer"
               className="glass-button inline-flex items-center justify-center gap-2 w-fit mt-2"
             >
-              <span>Ir al Curso</span>
+              <span>{t.oasis.cta}</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -64,7 +64,7 @@ export default function OasisBanner() {
 
             {/* Partners */}
             <div className="pt-8 mt-4 border-t border-white/10">
-              <p className="text-white/40 text-sm mb-6 tracking-wide">In Partnership with</p>
+              <p className="text-white/40 text-sm mb-6 tracking-wide">{t.oasis.partners}</p>
               <div className="glass-card p-6 flex items-center justify-around gap-8">
                 {partners.map((partner) => (
                   <img

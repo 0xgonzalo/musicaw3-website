@@ -1,7 +1,11 @@
+'use client';
 import Link from "next/link";
 import { FarcasterIcon, InstagramIcon, TelegramIcon, TiktokIcon, TwitterIcon, YoutubeIcon } from "../utils/icons";
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   const socialLinks = [
     { href: "https://warpcast.com/musicaw3", icon: FarcasterIcon, label: "Farcaster" },
     { href: "https://x.com/Musica_W3", icon: TwitterIcon, label: "Twitter" },
@@ -28,7 +32,7 @@ export default function Footer() {
                 MUSICAW3
               </h3>
               <p className="text-white/50 text-sm">
-                Música independiente en Web3
+                {t.footer.tagline}
               </p>
             </div>
 
@@ -53,9 +57,9 @@ export default function Footer() {
 
           {/* Bottom bar */}
           <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-            <p>© {new Date().getFullYear()} MusicaW3. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} MusicaW3. {t.footer.rights}</p>
             <p className="flex items-center gap-2">
-              Hecho con <span className="text-brand-primary">♥</span> para la comunidad
+              {t.footer.madeWith} <span className="text-brand-primary">♥</span> {t.footer.forCommunity}
             </p>
           </div>
         </div>

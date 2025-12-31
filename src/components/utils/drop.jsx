@@ -1,7 +1,11 @@
+'use client';
 import Image from "next/image"
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Drop({ id, title, location, description, link }) {
+  const { t } = useLanguage();
+
   return (
     <div className="animate-fade-in">
       <Link href={link} target="_blank" rel="noopener noreferrer" className="block">
@@ -46,7 +50,7 @@ export default function Drop({ id, title, location, description, link }) {
               </p>
               {/* CTA */}
               <div className="mt-6 inline-flex items-center gap-2 text-brand-accent group-hover:text-white transition-colors duration-300">
-                <span className="text-sm font-medium">Escuchar ahora</span>
+                <span className="text-sm font-medium">{t.drops.listenNow}</span>
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

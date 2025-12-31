@@ -1,7 +1,10 @@
+'use client';
 import { useState } from "react";
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function DropSelector({ onDropSelect }) {
   const [selectedDrop, setSelectedDrop] = useState("");
+  const { t } = useLanguage();
 
   const handleSelect = (e) => {
     const value = e.target.value;
@@ -18,7 +21,7 @@ export default function DropSelector({ onDropSelect }) {
           value={selectedDrop}
         >
           <option value="" disabled className="bg-brand-darker text-white">
-            Selecciona un Drop
+            {t.drops.selectPlaceholder}
           </option>
           {[...Array(13)].map((_, i) => (
             <option
