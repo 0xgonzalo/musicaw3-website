@@ -7,6 +7,7 @@ import HomeBanner from "@/components/home/home-banner";
 import Carousel from "@/components/utils/carousel";
 import OasisBanner from "@/components/home/oasis-banner";
 import FarcasterBanner from "@/components/home/farcaster-banner";
+import WowBanner from "@/components/home/wow-banner";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <div className="relative z-10">
         <HomeBanner />
         <AboutBanner />
+        <WowBanner />
         <Carousel />
         <OasisBanner />
         <FarcasterBanner />
