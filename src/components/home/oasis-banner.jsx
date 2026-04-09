@@ -63,15 +63,15 @@ export default function OasisBanner() {
             </a>
 
             {/* Partners */}
-            <div className="pt-8 mt-4 border-t border-white/10">
-              <p className="text-white/40 text-sm mb-6 tracking-wide">{t.oasis.partners}</p>
-              <div className="glass-card p-6 flex items-center justify-around gap-8">
+            <div className="pt-6 mt-3 border-t border-white/10">
+              <p className="text-white/40 text-xs mb-3 tracking-wide">{t.oasis.partners}</p>
+              <div className="glass-card p-3 flex items-center justify-around gap-4">
                 {partners.map((partner) => (
                   <img
                     key={partner.alt}
                     src={partner.src}
                     alt={partner.alt}
-                    style={{ width: partner.width }}
+                    style={{ width: partner.width * 0.7 }}
                     className="h-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
                   />
                 ))}

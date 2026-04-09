@@ -79,7 +79,7 @@ export default function HomeBanner() {
               className="group relative p-1.5 md:p-2.5 rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               <div className="absolute inset-0 rounded-lg bg-brand-primary/30 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-300" />
-              <div className="relative text-white/60 group-hover:text-white group-hover:scale-110 transition-all duration-300 scale-90 md:scale-100">
+              <div className="relative text-white/60 group-hover:text-white group-hover:scale-110 transition-all duration-300 scale-90 md:scale-100 w-8 h-8 flex items-center justify-center">
                 <Icon />
               </div>
             </Link>

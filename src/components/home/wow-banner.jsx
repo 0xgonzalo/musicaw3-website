@@ -25,7 +25,7 @@ export default function WowBanner() {
     return () => observer.disconnect();
   }, []);
 
-  const featureIcons = ["🎨", "⛓️", "🎤", "🌉", "🤝", "🛠️", "🌎"];
+  const featureIcons = ["🎨", "⛓️", "🎤", "🌉", "🤝", "🛠️"];
   const rewardIcons = ["🎭", "🏅", "🎁", "🎵", "🚀", "⭐"];
   const bonusIcons = ["🎶", "✨", "💎", "📱", "🏆", "🎫"];
 
@@ -73,8 +73,8 @@ export default function WowBanner() {
             <div className="absolute inset-0 -m-8 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-cyan-500 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-spin-slow" />
             <div className="absolute inset-0 -m-4 bg-gradient-to-r from-fuchsia-500 via-cyan-500 to-fuchsia-500 rounded-full blur-2xl opacity-20 animate-pulse-slow" />
 
-            {/* Logo with glass frame */}
-            <div className="relative glass-card p-6 md:p-8 rounded-3xl hover:scale-105 transition-transform duration-500">
+            {/* Logo */}
+            <div className="relative p-6 md:p-8 rounded-3xl hover:scale-105 transition-transform duration-500">
               <Image
                 src="/wow-logo.png"
                 alt="WOW! Festival"
@@ -90,7 +90,7 @@ export default function WowBanner() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 border border-white/10 mb-6">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
             <span className="text-sm font-medium text-white/80 tracking-widest uppercase">{t.wow.badge}</span>
-            <span className="w-2 h-2 rounded-full bg-fuchsia-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" style={{ animationDelay: '0.5s' }} />
           </div>
 
           {/* Main tagline */}
@@ -108,7 +108,8 @@ export default function WowBanner() {
             <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto">
               {t.wow.description}{' '}
               <span className="text-cyan-400 font-medium">{t.wow.descriptionHighlight1}</span>,{' '}
-              <span className="text-fuchsia-400 font-medium">{t.wow.descriptionHighlight2}</span> and{' '}
+              <span className="text-fuchsia-400 font-medium">{t.wow.descriptionHighlight2}</span>{' '}
+              {t.wow.descriptionListConnector}{' '}
               <span className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent font-medium">{t.wow.descriptionHighlight3}</span>
             </p>
             <div className="flex items-center justify-center gap-4 mt-6">

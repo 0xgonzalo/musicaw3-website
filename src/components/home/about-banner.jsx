@@ -9,7 +9,7 @@ export default function AboutBanner() {
   const stats = [
     { value: "+2k", label: "Collectors" },
     { value: "+150", label: t.about.stats.artists },
-    { value: "+5k", label: t.about.stats.community }
+    { value: "+2k", label: t.about.stats.community }
   ];
 
   return(

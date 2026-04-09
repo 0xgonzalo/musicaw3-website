@@ -6,7 +6,7 @@ import FoundersBanner from "@/components/home/founders-banner";
 import HomeBanner from "@/components/home/home-banner";
 import Carousel from "@/components/utils/carousel";
 import OasisBanner from "@/components/home/oasis-banner";
-import FarcasterBanner from "@/components/home/farcaster-banner";
+
 import WowBanner from "@/components/home/wow-banner";
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
         <WowBanner />
         <Carousel />
         <OasisBanner />
-        <FarcasterBanner />
+
         <EventsBanner />
         <DropsBanner />
         <FoundersBanner />
